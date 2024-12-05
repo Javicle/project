@@ -1,0 +1,26 @@
+
+.card.element-animation {
+    opacity: 0;
+    -webkit-transform: translateY(-28px);
+    -ms-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+}
+
+.card.element-animation:hover {
+    transform: translateY(0) scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+.element-animation {
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.element-animation.element-show {
+opacity: 1;
+transform: translateY(0);
+}

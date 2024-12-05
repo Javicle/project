@@ -1,0 +1,341 @@
+{% extends "base.html" %} {% load static %}
+{% load core_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%block title%} {{title_page}} {%endblock%}</title>
+  </head>
+  <body>
+    {% block content %}
+    <!--КАРУСЕЛЬ-->
+
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          class="active"
+          aria-current="true"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <svg
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Example headline.</h1>
+              <p class="opacity-75">
+                Some representative placeholder content for the first slide of
+                the carousel.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <svg
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>
+                Some representative placeholder content for the second slide of
+                the carousel.
+              </p>
+              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          >
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>One more for good measure.</h1>
+              <p>
+                Some representative placeholder content for the third slide of
+                this carousel.
+              </p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--Карточки-->
+    <div
+      class="container text-center align-items-center justify-content-center"
+    >
+      <div
+        class="row justify-content-center align-items-center row-cols-1 row-cols-sm-2 row-cols-md-4"
+      >
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Карточка-->
+
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Карточка-->
+
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--КОНЕЦ ROW-->
+
+      <div
+        class="row justify-content-center align-items-center row-cols-1 row-cols-sm-2 row-cols-md-4 pt-5"
+      >
+        <!--Карточка-->
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Карточка-->
+
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Карточка-->
+        <div class="col">
+          <div class="card element-animation" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/600x300"
+              alt="Placeholder Image"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Новостная карточка</h5>
+              <p class="card-text">Текст новостной карточки</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--КОНЕЦ ROW-->
+
+      <!--Герои-->
+      <h2 class="text-center mb-5 pt-5">Герои науки и техники</h2>
+      <div
+        class="row row-cols-1 row-cols-md-3 justify-content-center align-content-center"
+      >
+        <div class="col">
+          <div class="card element-animation" style="width: 20rem">
+            <img
+              src="https://via.placeholder.com/300"
+              class="card-img-top"
+              alt="Имя ученого"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Имя ученого</h5>
+              <p class="card-text">Краткое описание вклада ученого.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card element-animation" style="width: 20rem">
+            <img
+              src="https://via.placeholder.com/300"
+              class="card-img-top"
+              alt="Имя ученого"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Имя ученого</h5>
+              <p class="card-text">Краткое описание вклада ученого.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card element-animation" style="width: 20rem">
+            <img
+              src="https://via.placeholder.com/300"
+              class="card-img-top"
+              alt="Имя ученого"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Имя ученого</h5>
+              <p class="card-text">Краткое описание вклада ученого.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--КОНЕЦ ROW-->
+
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Карта исторических открытий</h2>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=xyz123"
+        width="100%"
+        height="480"
+      ></iframe>
+    </div>
+
+    <div class="container text-center align-items-center justify-content-center">
+      <div class="row justify-content-center align-items-center row-cols-1 row-cols-sm-2 row-cols-md-4">
+        {% for article in articles %}
+        <div class="col">
+          {% comment %} {% if article.title|is_long_title %}36rem{% else %}20rem{% endif %} {% endcomment %}
+          <div class="card element-animation" style="width: 20;">
+            <div class="position-relative">
+              <img
+                src="{% if article.photo %}{{ article.photo.url }}{% else %}https://via.placeholder.com/600x300{% endif %}"
+                alt="Image for {{ article.title }}"
+                class="card-img-top"
+              />
+              <div class="date-overlay">
+                <small>{{ article.published_date|date:"d M Y" }}</small>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ article.title|truncatewords:7 }}</h5>
+              <p class="card-text">{{ article.content|truncatewords:10 }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+
+    {%endblock%}
+  </body>
+</html>

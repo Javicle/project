@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    {% block content %}
+
+    <div class="container text-center align-items-center justify-content-center">
+      <div
+        class="row justify-content-center align-items-center row-cols-1 row-cols-sm-2 row-cols-md-4"
+      >
+      {% for article in articles %}
+      <div class="col">
+        <div class="card element-animation" style="width: 20rem;">
+          <div class="position-relative">
+            <img
+              src="{% if article.photo %}{{ article.photo.url }}{% else %}https://via.placeholder.com/600x300{% endif %}"
+              alt="Image for {{ article.title }}"
+              class="card-img-top"
+            />
+            <div class="date-overlay">
+              <small>{{ article.published_date|date:"d M Y" }}</small>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.content|truncatewords:10 }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    {%endblock%}
+  </body>
+</html>
